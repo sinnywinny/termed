@@ -76,29 +76,47 @@
         }
         .audio-container {
             margin-top: 20px;
-            background-color: rgba(255, 0, 0, 0.3); /* Red transparent background /
-            border: 2px solid rgba(255, 0, 0, 0.6); / Darker red border /
+            background-color: rgba(255, 0, 0, 0.3); /* Red transparent background */
+            border: 2px solid rgba(255, 0, 0, 0.6); /* Darker red border */
             border-radius: 10px;
             padding: 10px;
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); / Glow effect */
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Glow effect */
         }
         .audio-container audio {
             width: 100%;
             outline: none;
             border: none;
         }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                width: 80%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p, .button {
+                font-size: 12px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>@forcingly is not terminated</h1>
         <p><a href="https://shock.lol/ur" target="_blank">https://shock.lol/ur</a></p>
-        <button class="button">Active</button>
+        
+        <!-- Active Button -->
+        <button class="button" onclick="alert('The status is active!')">Active</button>
+        
         <p class="update-message">If I get termed, this will be updated.</p>
-        <!-- Styled audio player -->
+        
+        <!-- Styled audio player with click-to-play functionality -->
         <div class="audio-container">
-            <audio controls autoplay>
-                <source src="https://cdn.discordapp.com/attachments/1320892892897869844/1320906336912801882/spotifydown.com_-_Under_Your_Spell.mp3?ex=676b4d63&is=6769fbe3&hm=241f6947d6e73232de74d6a3f1855c725a5bc03a4509ea4cbb3f7f1cdaaf1706&">
+            <audio controls>
+                <source src="https://cdn.discordapp.com/attachments/1320892892897869844/1320906336912801882/spotifydown.com_-_Under_Your_Spell.mp3?ex=676b4d63&is=6769fbe3&hm=241f6947d6e73232de74d6a3f1855c725a5bc03a4509ea4cbb3f7f1cdaaf1706&" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
